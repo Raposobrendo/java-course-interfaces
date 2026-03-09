@@ -1,6 +1,6 @@
-package application;
+package firstTry.application;
 
-import entities.Rent;
+import firstTry.entities.Rent;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
