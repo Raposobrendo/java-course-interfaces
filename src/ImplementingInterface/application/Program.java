@@ -1,9 +1,9 @@
-package solution1.application;
+package ImplementingInterface.application;
 
-import solution1.model.entities.CarRental;
-import solution1.model.entities.Vehicle;
-import solution1.model.services.BrazilTaxService;
-import solution1.model.services.RentalService;
+import ImplementingInterface.model.services.BrazilTaxService;
+import ImplementingInterface.model.entities.CarRental;
+import ImplementingInterface.model.services.RentalService;
+import ImplementingInterface.model.entities.Vehicle;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
