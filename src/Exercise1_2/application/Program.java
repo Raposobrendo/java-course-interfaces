@@ -1,0 +1,47 @@
+package Exercise1_2.application;
+
+import Exercise1_2.model.entities.Contract;
+import Exercise1_2.model.entities.Installment;
+import Exercise1_2.model.services.ContractService;
+import Exercise1_2.model.services.PaymentService;
+import Exercise1_2.model.services.PaypalPayment;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Program {
+    public static void main(String[] args){
+
+        DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter contract data:");
+        System.out.print("Number: ");
+        int contractNumber = sc.nextInt();
+
+        System.out.print("Enter data (dd/MM/yyyy): ");
+        sc.nextLine();
+        String date = sc.nextLine();
+        LocalDate contractDate = LocalDate.parse(date, fmt);
+
+        System.out.print("Contract value: ");
+        double contractValue = sc.nextDouble();
+
+        System.out.print("Enter number os installments: ");
+        int quantityInstallments = sc.nextInt();
+
+        Contract contract = new Contract(contractNumber, contractDate, contractValue);
+        PaymentService paymentService = new PaypalPayment();
+        ContractService contractService = new ContractService(paymentService);
+        List<Installment> installments = contractService.processContract(contract, quantityInstallments);
+
+        for(Installment inst : installments){
+            System.out.println(inst);
+        }
+
+    }
+}
