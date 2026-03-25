@@ -8,7 +8,7 @@ public class PaypalPayment implements PaymentService{
     }
 
     @Override
-    public double tax(double amount){
+    public double tax(double amount)    {
         return amount * 0.02;
     }
 

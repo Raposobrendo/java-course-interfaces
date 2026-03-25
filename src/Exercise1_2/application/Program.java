@@ -35,8 +35,7 @@ public class Program {
         int quantityInstallments = sc.nextInt();
 
         Contract contract = new Contract(contractNumber, contractDate, contractValue);
-        PaymentService paymentService = new PaypalPayment();
-        ContractService contractService = new ContractService(paymentService);
+        ContractService contractService = new ContractService(new PaypalPayment());
         List<Installment> installments = contractService.processContract(contract, quantityInstallments);
 
         for(Installment inst : installments){

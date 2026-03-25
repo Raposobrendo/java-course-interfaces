@@ -21,12 +21,12 @@ public class ContractService {
         return basicTotal + paymentService.tax(basicTotal);
     }
 
-    public List<Installment> processContract(Contract contract, int month){
+    public List<Installment> processContract(Contract contract, int months){
 
         List<Installment> installments = new ArrayList<>();
-        double amount = contract.getTotalValue()/month;
+        double amount = contract.getTotalValue()/months;
 
-        for(int i = 1; i <= month; i++){
+        for(int i = 1; i <= months; i++){
             double installmentValue = totalAmount(amount, i);
             installments.add(new Installment(contract.getDate().plusMonths(i), installmentValue));
         }
