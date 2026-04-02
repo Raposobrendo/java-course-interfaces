@@ -2,7 +2,7 @@ package inheritanceVsContract.model.entities;
 
 import inheritanceVsContract.model.enums.Color;
 
-public class Circle extends Shape{
+public class Circle extends AbstractShape{
 
     private Double radius;
 

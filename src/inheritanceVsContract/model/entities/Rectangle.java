@@ -2,7 +2,7 @@ package inheritanceVsContract.model.entities;
 
 import inheritanceVsContract.model.enums.Color;
 
-public class Rectangle extends Shape{
+public class Rectangle extends AbstractShape{
 
     public double height;
     public double width;
