@@ -1,4 +1,4 @@
-package Exercise1_2.model.services;
+package exercise1_2.model.services;
 
 public interface PaymentService {
 

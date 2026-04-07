@@ -1,14 +1,12 @@
-package Exercise1_2.application;
+package exercise1_2.application;
 
-import Exercise1_2.model.entities.Contract;
-import Exercise1_2.model.entities.Installment;
-import Exercise1_2.model.services.ContractService;
-import Exercise1_2.model.services.PaymentService;
-import Exercise1_2.model.services.PaypalPayment;
+import exercise1_2.model.entities.Contract;
+import exercise1_2.model.entities.Installment;
+import exercise1_2.model.services.ContractService;
+import exercise1_2.model.services.PaypalPayment;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 

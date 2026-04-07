@@ -1,4 +1,4 @@
-package Exercise1.model.services;
+package exercise1.model.services;
 
 public class PaypalPayment implements PaymentService{
 

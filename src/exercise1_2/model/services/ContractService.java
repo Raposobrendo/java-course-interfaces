@@ -1,7 +1,7 @@
-package Exercise1_2.model.services;
+package exercise1_2.model.services;
 
-import Exercise1_2.model.entities.Contract;
-import Exercise1_2.model.entities.Installment;
+import exercise1_2.model.entities.Contract;
+import exercise1_2.model.entities.Installment;
 
 import java.util.ArrayList;
 import java.util.List;
